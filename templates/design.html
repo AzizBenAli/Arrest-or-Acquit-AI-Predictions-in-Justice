@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrest Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        input[type="text"], input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+        }
+        .checkbox-group label {
+            margin-right: 10px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Arrest Prediction</h1>
+        <form id="prediction-form">
+            <label for="driver_gender">Driver Gender (M/F):</label>
+            <input type="text" id="driver_gender" name="driver_gender" required>
+            
+            <label for="driver_age">Driver Age:</label>
+            <input type="number" id="driver_age" name="driver_age" required>
+            
+            <label for="driver_race_raw">Driver Race Raw:</label>
+            <input type="text" id="driver_race_raw" name="driver_race_raw" required>
+            
+            <label for="driver_race">Driver Race:</label>
+            <input type="text" id="driver_race" name="driver_race" required>
+            
+            <div class="checkbox-group">
+                <label>Contraband Found:</label>
+                <input type="checkbox" id="contraband_found_true" name="contraband_found" value="true">
+                <label for="contraband_found_true">True</label>
+                <input type="checkbox" id="contraband_found_false" name="contraband_found" value="false">
+                <label for="contraband_found_false">False</label>
+            </div>
+
+            <label for="violation">Violation:</label>
+            <input type="text" id="violation" name="violation" required>
+            
+            <label for="search_type">Search Type:</label>
+            <input type="text" id="search_type" name="search_type" required>
+                        
+            <label for="search_basis">Search Basis:</label>
+            <input type="text" id="search_basis" name="search_basis" required>
+            
+            <label for="year">Year:</label>
+            <input type="number" id="year" name="year" required>
+            
+            <label for="month">Month:</label>
+            <input type="number" id="month" name="month" required>
+            
+            <label for="day_of_week">Day of Week:</label>
+            <input type="number" id="day_of_week" name="day_of_week" required>
+            
+            <button type="button" onclick="predict()">Predict</button>
+        </form>
+        <p class="result" id="prediction-result"></p>
+    </div>
+
+    <script>
+        function predict() {
+            const form = document.getElementById("prediction-form");
+            const formData = new FormData(form);
+            
+            fetch("/predict", {
+                method: "POST",
+                body: formData,
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById("prediction-result").textContent = `Prediction: ${data.prediction}`;
+            })
+            .catch(error => {
+                console.error("Error:", error);
+            });
+        }
+    </script>
+</body>
+</html>
