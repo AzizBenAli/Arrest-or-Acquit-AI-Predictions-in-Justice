@@ -1,4 +1,4 @@
-## Arrest Prediction Classifier 🚓💡
+### Arrest Prediction Classifier 🚓💡
 Project Image
 
 ## Overview 📋
