@@ -1,5 +1,5 @@
-## Arrest Prediction Classifier 🚓💡
-Project Image
+# Arrest Prediction Classifier 🚓💡
+
 
 # Overview 📋
 This thrilling project focuses on developing a high-tech machine learning model to predict whether an individual should be arrested or not based on various features and circumstances recorded during traffic stops. We employ data analysis, feature engineering, and machine learning wizardry to build and evaluate three different models: Random Forest, K-Nearest Neighbors (KNN), and a Stacked Ensemble Model.
