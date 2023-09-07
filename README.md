@@ -38,7 +38,7 @@ Data Preparation: Ensure your input data is as sparkling clean and magically pre
 
 Model Inference: Summon the selected machine learning model and use its mystical powers to predict whether an individual should face the handcuffs or not based on the input features.
 
-## Contact 📧
+# Contact 📧
 If you have any questions, suggestions, or simply want to discuss the wonders of machine learning, deep learning, or NLP, don't hesitate to send a raven or an owl to reach out to me!
 
 Aziz Ben Ali 🧙‍♂
