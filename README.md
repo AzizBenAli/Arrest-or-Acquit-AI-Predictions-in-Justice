@@ -28,6 +28,9 @@ We put our models to the test! They battled with metrics like accuracy, precisio
 ## Results 🎉
 After the epic showdown and relentless evaluation, we crowned the model that achieved the highest accuracy and overall predictive performance.
 
+### Deployment with Flask 🌐
+To bring our most powerful model to life, we have harnessed the power of Flask, a web framework for Python. Flask enables us to create an intuitive and user-friendly interface for making predictions based on traffic stop data. With Flask, we have developed a web application that allows users to input relevant information and receive instant predictions on whether an individual should be arrested.
+
 ## How to Use ⚙️
 To embark on your own AI journey and utilize the trained model for making predictions on new data, follow these enchanted steps:
 
