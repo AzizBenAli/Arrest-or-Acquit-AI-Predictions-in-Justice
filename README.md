@@ -31,6 +31,17 @@ After the epic showdown and relentless evaluation, we crowned the model that ach
 # Deployment with Flask 🌐
 To bring our most powerful model to life, we have harnessed the power of Flask, a web framework for Python. Flask enables us to create an intuitive and user-friendly interface for making predictions based on traffic stop data. With Flask, we have developed a web application that allows users to input relevant information and receive instant predictions on whether an individual should be arrested.
 
+## Using PythonAnywhere for Deployment 🚀
+We've deployed our application using PythonAnywhere, a cloud-based platform that makes it easy to deploy, run, and host web applications in Python. You can access our application by clicking the following link:
+
+[Arrest Prediction Web App](http://ge65dal1.pythonanywhere.com/)
+
+Simply click the link, and you'll be directed to the web interface where you can start making predictions based on traffic stop data.
+
+Please note that this deployment is intended for demonstration purposes. For production use, consider a more robust hosting solution.
+
+For any questions or feedback, feel free to reach out to us!
+
 # How to Use ⚙️
 To embark on your own AI journey and utilize the trained model for making predictions on new data, follow these enchanted steps:
 
